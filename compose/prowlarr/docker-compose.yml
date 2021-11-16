@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  prowlarr:
+    container_name: prowlarr
+    image: hotio/prowlarr:testing
+    ports:
+      - "9696:9696"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Europe/Istanbul
+    volumes:
+      - /media/HDD1/server/configs/prowlarr:/config
+    restart: unless-stopped

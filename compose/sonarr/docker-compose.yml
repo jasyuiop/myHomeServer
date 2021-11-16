@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  sonarr:
+    container_name: sonarr
+    image: linuxserver/sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Istanbul
+    ports:
+      - '8989:8989'
+    volumes:
+      - /media/HDD1/server/configs/sonarr:/config
+      - /media/HDD1/server:/data
+    restart: unless-stopped

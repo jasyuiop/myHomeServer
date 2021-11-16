@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  lidarr:
+    container_name: lidarr
+    image: ghcr.io/linuxserver/lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Istanbul
+    volumes:
+      - /media/HDD1/server/configs/lidarr:/config
+      - /media/HDD1/server:/data
+    ports:
+      - '8686:8686'
+    restart: unless-stopped

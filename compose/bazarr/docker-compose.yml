@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  bazarr:
+    container_name: bazarr
+    image: ghcr.io/linuxserver/bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Istanbul
+    volumes:
+      - /media/HDD1/server/configs/bazarr:/config
+      - /media/HDD1/server:/data
+    ports:
+      - '6767:6767'
+    restart: unless-stopped

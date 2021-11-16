@@ -1,0 +1,14 @@
+version: "2.1"
+services:
+  ombi:
+    container_name: ombi
+    image: ghcr.io/linuxserver/ombi
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Istanbul
+    volumes:
+      - /media/HDD1/server/configs/ombi:/config
+    ports:
+      - '3579:3579'
+    restart: unless-stopped
