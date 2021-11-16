@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  qflood:
+    container_name: qflood
+    image: hotio/qflood
+    ports:
+      - "8080:8080"
+      - "3005:3000"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Europe/Istanbul
+      - FLOOD_AUTH=false
+    volumes:
+      - /media/HDD1/server/configs/qflood:/config
+      - /media/HDD1/server/torrents:/data/torrents
+    restart: unless-stopped
