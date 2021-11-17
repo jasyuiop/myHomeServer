@@ -13,6 +13,6 @@ services:
       - TZ=Europe/Istanbul
       - FLOOD_AUTH=false
     volumes:
-      - /media/HDD1/server/configs/qflood:/config
-      - /media/HDD1/server/torrents:/data/torrents
+      - "D:/server/configs/qflood:/config"
+      - "D:/server/torrents:/data/torrents"
     restart: unless-stopped

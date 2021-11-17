@@ -10,6 +10,6 @@ services:
     ports:
       - '8989:8989'
     volumes:
-      - /media/HDD1/server/configs/sonarr:/config
-      - /media/HDD1/server:/data
+      - "D:/server/configs/sonarr:/config"
+      - "D:/server:/data"
     restart: unless-stopped
