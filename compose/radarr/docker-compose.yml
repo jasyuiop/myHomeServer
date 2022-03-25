@@ -10,6 +10,6 @@ services:
     ports:
       - '7878:7878'
     volumes:
-      - "D:/server/configs/radarr:/config"
-      - "D:/server:/data"
+      - /media/HDD1/server/configs/radarr:/config
+      - /media/HDD1/server:/data
     restart: unless-stopped

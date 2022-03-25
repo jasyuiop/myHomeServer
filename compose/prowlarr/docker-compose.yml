@@ -11,5 +11,5 @@ services:
       - UMASK=002
       - TZ=Europe/Istanbul
     volumes:
-      - "D:/server/configs/prowlarr:/config"
+      - /media/HDD1/server/configs/prowlarr:/config
     restart: unless-stopped
